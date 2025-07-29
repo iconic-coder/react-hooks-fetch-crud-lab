@@ -7,7 +7,9 @@ module.exports = {
   moduleNameMapper: {
     "\\.(css|less|scss|sass)$": "identity-obj-proxy",
   },
+  // ✅ Fix optional chaining error by transforming this node_module:
   transformIgnorePatterns: [
-    "/node_modules/(?!(@adobe)/)" // allow adobe package to be transformed
+    "/node_modules/(?!(\\@adobe/css-tools)/)"
   ],
 };
+
